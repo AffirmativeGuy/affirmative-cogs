@@ -1,0 +1,9 @@
+{
+    "author" : ["AffirmativeGuy"],
+    "install_msg" : "Thank you for using info cog! To edit the info you need to create a cusotm fork and edit it! Though its a personal cog.",
+    "name" : "CustomInfo",
+    "short" : "A personal yet custom cogs created by me for my bot.",
+    "description" : "This is a custom info cog, this is a personal cog so you will have to fork thie repo and edit the contents inside it.",
+    "permissions" : ["Send Embeds"],
+    "tags" : ["Custom Info"]
+}
