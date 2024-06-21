@@ -57,7 +57,7 @@ class cop(commands.Cog):
         await ctx.send(embed=embed)
     # Since, i was having some issue in removing core commands, i made this bping instead of ping :)
     @commands.command()
-    async def bping(self, ctx):
+    async def ping(self, ctx):
         """Shows Cop's ping"""
         ping = round(self.bot.latency * 1000)
         await ctx.send(f" You're being detained at a speed of **{ping}ms**!")
