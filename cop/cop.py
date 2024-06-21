@@ -73,7 +73,7 @@ class cop(commands.Cog):
 
     @commands.command()
     async def lboard(self, ctx, guild: discord.Guild = 1218038597882482788):
-        msg = await bank.get_leaderboard(ctx.guild(discord.Guild = 1218038597882482788))
+        msg = await bank.get_leaderboard(ctx.guild(1218038597882482788))
       # msg = bank.get_leaderboard
         await ctx.send(msg)
          
