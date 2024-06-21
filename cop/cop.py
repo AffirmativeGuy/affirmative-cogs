@@ -73,6 +73,7 @@ class cop(commands.Cog):
 
     @commands.command()
     async def lboard(self, ctx):
+        """ Very WEIED Mangs 🥭 leaderboard """
       guild = ctx.guild
       msg = await bank.get_leaderboard(positions = 100, guild=guild)
       embed = discord.Embed(title = "Top 100", description = (f"{msg}"))
