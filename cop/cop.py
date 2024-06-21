@@ -17,16 +17,11 @@ from redbot.core import (
 
 class cop(commands.Cog):
     """Some tools which gives info about Cop <:cop:1243924879045034075>."""
-    def __init__(self, bot: Red, old_info:
-    commands.Command):
+    def __init__(self, bot: Red):
        self.bot = bot
-       self.old_info = old_info
-
     async def cog_unload(self) -> None:
-       if self.old_info:
          with contextlib.suppress(Exception):
              self.bot.remove_command("info")
-             self.bot.add_command(self.old_info)
              self.bot.remove_command("ping")
              self.bot.remove_command("inviteset")
     @commands.command()
