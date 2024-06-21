@@ -73,7 +73,7 @@ class cop(commands.Cog):
 
     @commands.command()
     async def lboard(self, ctx):
-        msg = await channel.send( f"Some {await bank.get_currency_name(guild=message.guild)} have fallen, type `pickup` to pick them up!" )
+        msg = await ctx.send( f"Some {await bank.get_currency_name(guild=message.guild)} have fallen, type `pickup` to pick them up!" )
       #  board = bank.get_leaderboard
         await ctx.send(f"{msg}")
          
