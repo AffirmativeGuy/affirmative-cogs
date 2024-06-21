@@ -77,7 +77,6 @@ class cop(commands.Cog):
       guild = ctx.guild
       msg = await bank.get_leaderboard(positions = 100, guild=guild)
       embed = discord.Embed(title = "Top 100", description = (f"{msg}"))
-      # msg = bank.get_leaderboard
       await ctx.send(embed=embed)
          
         
