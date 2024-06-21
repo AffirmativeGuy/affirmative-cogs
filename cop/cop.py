@@ -73,8 +73,8 @@ class cop(commands.Cog):
 
     @commands.command()
     async def lboard(self, ctx):
-        board = await bank.get_leaderboard
-        await ctx.send(f"{msg}")
+        board = bank.get_leaderboard
+        await ctx.send(f"{board}")
          
         
         
