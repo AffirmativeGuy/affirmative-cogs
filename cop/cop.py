@@ -61,10 +61,12 @@ class cop(commands.Cog):
         """Shows Cop's ping"""
         ping = round(self.bot.latency * 1000)
         await ctx.send(f" You're being detained at a speed of **{ping}ms**!")
+    @commands.command()
     async def mang(self, ctx, user: discord.Member = commands.Author):
         bal = await bank.get_balance(user)
         currency = await bank.get_currency_name(ctx.guild)
         embed = discord.Embed(title = "Yourrr Balance Isssss", description = (f"** {bal} {currency}**"))
+        await ctx.send(embed=embed)
          
         
         
