@@ -56,7 +56,6 @@ class cop(commands.Cog):
         embed.add_field(inline=False, name = 'Emojis', value = "Most of the emojis used in this bot is taken from NQN, so the credits goes to their respective owners.")  
         embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to thoose awesome people for their work :P)', value = "Work In Progress 🤠")
         await ctx.send(embed=embed)
-    # Since, i was having some issue in removing core commands, i made this bping instead of ping :)
     @commands.command()
     async def ping(self, ctx):
         """Shows Cop's ping"""
@@ -69,9 +68,6 @@ class cop(commands.Cog):
         currency = await bank.get_currency_name(ctx.guild)
         embed = discord.Embed(title = "Yourrr Balance Isssss", description = (f"** {bal} {currency}**"))
         await ctx.send(embed=embed)
-
-
-
     @commands.command()
     async def lboard(self, ctx):
       """ Very WEIRD Mangs 🥭 leaderboard """
