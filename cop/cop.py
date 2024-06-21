@@ -68,6 +68,13 @@ class cop(commands.Cog):
         currency = await bank.get_currency_name(ctx.guild)
         embed = discord.Embed(title = "Yourrr Balance Isssss", description = (f"** {bal} {currency}**"))
         await ctx.send(embed=embed)
+
+
+
+        @commands.command()
+        async def lboard(self, ctx):
+            lboard = await redbot.core.bank.get_leaderboard
+            await ctx.send(lboard)
          
         
         
