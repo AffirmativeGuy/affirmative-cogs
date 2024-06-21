@@ -73,7 +73,8 @@ class cop(commands.Cog):
 
     @commands.command()
     async def lboard(self, ctx):
-        await ctx.send(bank.get_leaderboard)
+        board = awaitredbot.core.bank.get_leaderboard
+        await ctx.send(f"{msg}")
          
         
         
