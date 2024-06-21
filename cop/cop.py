@@ -27,6 +27,7 @@ class cop(commands.Cog):
          with contextlib.suppress(Exception):
              self.bot.remove_command("info")
              self.bot.add_command(self.old_info)
+             self.bot.remove_command("ping")
     @commands.command()
     async def info(self, ctx):
         """Shows information about Cop<:cop:1243924879045034075>."""
