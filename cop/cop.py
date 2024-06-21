@@ -71,9 +71,9 @@ class cop(commands.Cog):
 
 
 
-        @commands.command()
-        async def lboard(self, ctx):
-            await ctx.send(f"{await redbot.core.bank.get_leaderboard}")
+    @commands.command()
+    async def lboard(self, ctx):
+        await ctx.send(f"{await redbot.core.bank.get_leaderboard}")
          
         
         
