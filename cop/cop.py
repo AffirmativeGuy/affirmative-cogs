@@ -23,11 +23,9 @@ class cop(commands.Cog):
          with contextlib.suppress(Exception):
              self.bot.remove_command("info")
              self.bot.remove_command("ping")
-             self.bot.remove_command("inviteset")
     @commands.command()
     async def info(self, ctx):
         """Shows information about Cop<:cop:1243924879045034075>."""
-      # The code to remove a core(in this case info) was copied from blizzard's simple ping. Thanks to his code.
         ping = round(self.bot.latency * 1000)
         python_url = "https://www.python.org/"
         dpy_repo = "https://github.com/Rapptz/discord.py"
