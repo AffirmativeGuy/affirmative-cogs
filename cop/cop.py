@@ -19,10 +19,16 @@ class cop(commands.Cog):
     """Some tools which gives info about Cop <:cop:1243924879045034075>."""
     def __init__(self, bot):
         self.bot = bot
+   # async def cog_unload(self) -> None:
+         #with contextlib.suppress(Exception):
+             #self.bot.remove_command("info")
+           #  self.bot.remove_command("ping")
     async def cog_unload(self) -> None:
-         with contextlib.suppress(Exception):
-             self.bot.remove_command("info")
-             self.bot.remove_command("ping")
+        global old_ping
+        if old_ping:
+            with contextlib.suppress(Exception):
+                self.bot.remove_command("ping")
+                self.bot.add_command(old_ping)
     @commands.command()
     async def info(self, ctx):
         """Shows information about Cop<:cop:1243924879045034075>."""
