@@ -17,6 +17,8 @@ from redbot.core import (
 
 class cop(commands.Cog):
     """Some tools which gives info about Cop <:cop:1243924879045034075>."""
+    def __init__(self, bot):
+        self.bot = bot
     async def cog_unload(self) -> None:
          with contextlib.suppress(Exception):
              self.bot.remove_command("info")
