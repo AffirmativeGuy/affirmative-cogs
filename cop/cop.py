@@ -17,9 +17,6 @@ from redbot.core import (
 
 class cop(commands.Cog):
     """Some tools which gives info about Cop <:cop:1243924879045034075>."""
-    def __init__(self, bot: Red, old_ping: commands.Command):
-       self.bot = bot
-       self.old_ping = old_ping
     async def cog_unload(self) -> None:
          with contextlib.suppress(Exception):
              self.bot.remove_command("info")
@@ -54,9 +51,9 @@ class cop(commands.Cog):
         await ctx.send(embed=embed)
     @commands.command()
     async def ping(self, ctx):
-        """Shows Cop's ping"""
+        """Shows C<:cop:1243924879045034075>p's ping"""
         ping = round(self.bot.latency * 1000)
-        await ctx.send(f" You're being detained at a speed of **{ping}ms**!")
+        await ctx.send(f" You're being detained at a speed of **{ping}ms. See I told you that I am ~~slow enough~~ fast enough to catch you hehe!**!")
     @commands.command()
     async def mang(self, ctx, user: discord.Member = commands.Author):
         """Get info about your balance"""
