@@ -73,7 +73,7 @@ async def setup(bot: Red) -> None:
     global old_ping
     old_ping = bot.get_command("ping")
     if old_ping:
-        bot.remove_command(old_ping.name)
+        bot.add_command(old_ping.name)
     cog = cop(bot)
     await bot.add_cog(cog)
          
