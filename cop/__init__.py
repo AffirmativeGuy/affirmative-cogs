@@ -8,6 +8,12 @@ from .cop import cop
     bot.get_command("ping")
     bot.remove_command("ping")
     await bot.add_cog(cop(bot))'''
+async def cog_unload(self) -> None:
+    global old_ping
+    if old_ping:
+          with contextlib.suppress(Exception):
+               self.bot.remove_command("ping")
+               self.bot.add_command(old_ping)
 async def setup(bot: Red) -> None:
     global old_ping
     old_ping = bot.get_command("ping")
