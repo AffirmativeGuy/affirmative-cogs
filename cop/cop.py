@@ -25,11 +25,11 @@ class cop(commands.Cog):
            #  self.bot.remove_command("ping")
     async def cog_unload(self) -> None:
         global old_ping
+        self.bot.remove_command("info")
         if old_ping:
             with contextlib.suppress(Exception):
                 self.bot.remove_command("ping")
                 self.bot.add_command(old_ping)
-                self.bot.remove_command("info")
     @commands.command()
     async def info(self, ctx):
         """Shows information about Cop<:cop:1243924879045034075>."""
