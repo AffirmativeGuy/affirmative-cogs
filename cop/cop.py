@@ -34,9 +34,6 @@ class cop(commands.Cog):
     async def info(self, ctx):
         """Shows information about Cop<:cop:1243924879045034075>."""
         ping = round(self.bot.latency * 1000)
-        python_url = "https://www.python.org/"
-        dpy_repo = "https://github.com/Rapptz/discord.py"
-        red_pypi = "https://pypi.org/project/Red-DiscordBot"
         dpy_version = "{}".format(discord.__version__)
         python_version = "{}.{}.{}".format(*sys.version_info[:3])
         red_version = "{}".format(__version__)
