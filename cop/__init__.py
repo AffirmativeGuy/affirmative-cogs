@@ -14,6 +14,7 @@ async def cog_unload(self) -> None:
           with contextlib.suppress(Exception):
                self.bot.remove_command("ping")
                self.bot.add_command(old_ping)
+               self.bot.remove_command("info")
 async def setup(bot: Red) -> None:
     global old_ping
     old_ping = bot.get_command("ping")
