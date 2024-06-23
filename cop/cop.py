@@ -83,6 +83,5 @@ async def setup(bot: Red) -> None:
         bot.remove_command(old_ping.name)
         cog = cop(bot)
     await bot.add_cog(cog)
-         # testiing
-        
+
         
