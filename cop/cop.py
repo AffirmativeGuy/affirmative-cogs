@@ -55,7 +55,7 @@ class cop(commands.Cog):
         embed = discord.Embed(title = 'The Honorable CreditBoard', description = " ")
         embed.add_field(inline=False, name = 'Red-DiscordBot', value = "Cop is a instance of Red, Created by [Twnetysix26](https://github.com/Twentysix26) and [improved by many awesome people.](https://github.com/Cog-Creators/Red-DiscordBot/graphs/contributors)")
         embed.add_field(inline=False, name = 'Emojis', value = "Most of the emojis used in this bot is taken from NQN, so the credits goes to their respective owners.")  
-        embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to thoose awesome people for their work :P)', value = "Work In Progress 🤠")
+        embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to those awesome people for their work :P)', value = "Work In Progress 🤠")
         await ctx.send(embed=embed)
     @commands.command()
     async def ping(self, ctx):
@@ -83,5 +83,4 @@ async def setup(bot: Red) -> None:
         bot.remove_command(old_ping.name)
         cog = cop(bot)
     await bot.add_cog(cog)
-
         
