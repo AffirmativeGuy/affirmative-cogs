@@ -69,6 +69,13 @@ class cop(commands.Cog):
       msg = await bank.get_leaderboard(positions = 100, guild=guild)
       embed = discord.Embed(title = "Top 100", description = (f"{msg}"))
       await ctx.send(embed=embed)
+async def setup(bot: Red) -> None:
+    global old_ping
+    old_ping = bot.get_command("ping")
+    if old_ping:
+        bot.remove_command(old_ping.name)
+cog = cop(bot)
+await bot.add_cog(cog)
          
         
         
