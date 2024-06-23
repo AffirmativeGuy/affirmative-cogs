@@ -17,12 +17,14 @@ from redbot.core import (
 
 class cop(commands.Cog):
     """Some tools which gives info about Cop <:cop:1243924879045034075>."""
-    def __init__(self, bot: Red):
+    def __init__(self, bot: Red, old_ping: commands.Command):
        self.bot = bot
+       self.old_ping = old_ping
     async def cog_unload(self) -> None:
          with contextlib.suppress(Exception):
              self.bot.remove_command("info")
              self.bot.remove_command("ping")
+             self.bot.add_command(self.old_ping)
     @commands.command()
     async def info(self, ctx):
         """Shows information about Cop<:cop:1243924879045034075>."""
