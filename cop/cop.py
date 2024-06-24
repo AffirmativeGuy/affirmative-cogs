@@ -58,7 +58,7 @@ class cop(commands.Cog):
         embed = discord.Embed(title = 'The Honorable CreditBoard', description = " ")
         embed.add_field(inline=False, name = 'Red-DiscordBot', value = "Cop is a instance of Red, Created by [Twnetysix26](https://github.com/Twentysix26) and [improved by many awesome people.](https://github.com/Cog-Creators/Red-DiscordBot/graphs/contributors)")
         embed.add_field(inline=False, name = 'Emojis', value = "Most of the emojis used in this bot is taken from NQN, so the credits goes to their respective owners.")  
-        embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to those awesome people for their work :P)', value = '**aaa3a-cogs: \nad-cog: \nadrian: \nblizz-cogs: \ncrab-cogs: \nflare-cogs: \nluffycogs: \njojocogs: \njumperplugins: \nlaggrons-dumb-cogs: \nlui-cogs-v3: \nmaxcogs: \naffirmative-cogs: \nnpc-cogs: \npcxcogs: \nseina-cogs: \nsravan: \ntoxic-cogs: \nTrusty-cogs: \nvrt-cogs: \nyamicogs: \n**')
+        embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to those awesome people for their work :P)', value = '**aaa3a-cogs: \nad-cog: \nadrian: \nblizz-cogs: \ncrab-cogs: \nflare-cogs: \nfluffycogs: \njojocogs: \njumperplugins: \nlaggrons-dumb-cogs: \nlui-cogs-v3: \nmaxcogs: \naffirmative-cogs: \nnpc-cogs: \npcxcogs: \nseina-cogs: \nsravan: \ntoxic-cogs: \nTrusty-cogs: \nvrt-cogs: \nyamicogs: \n**')
         await ctx.send(embed=embed)
     @commands.command()
     async def ping(self, ctx):
