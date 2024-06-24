@@ -53,11 +53,12 @@ class cop(commands.Cog):
         """Shows the credits of Cop."""
         cog = self.bot.get_cog("Downloader")
         repos = cog._repo_manager.repos
+        s_repos = sorted(repos, key=lambda r: str.lower(r.name))
         title = "Credits"
         embed = discord.Embed(title = 'The Honorable CreditBoard', description = " ")
         embed.add_field(inline=False, name = 'Red-DiscordBot', value = "Cop is a instance of Red, Created by [Twnetysix26](https://github.com/Twentysix26) and [improved by many awesome people.](https://github.com/Cog-Creators/Red-DiscordBot/graphs/contributors)")
         embed.add_field(inline=False, name = 'Emojis', value = "Most of the emojis used in this bot is taken from NQN, so the credits goes to their respective owners.")  
-        embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to those awesome people for their work :P)', value = repos)
+        embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to those awesome people for their work :P)', value = s_repos)
         await ctx.send(embed=embed)
     @commands.command()
     async def ping(self, ctx):
