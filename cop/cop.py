@@ -19,17 +19,11 @@ class cop(commands.Cog):
     """Some tools which gives info about Cop <:cop:1243924879045034075>."""
     def __init__(self, bot):
         self.bot = bot
-   # async def cog_unload(self) -> None:
-         #with contextlib.suppress(Exception):
-             #self.bot.remove_command("info")
-           #  self.bot.remove_command("ping")
     async def cog_unload(self) -> None:
-        global old_ping
-        self.bot.remove_command("info")
-        if old_ping:
-            with contextlib.suppress(Exception):
-                self.bot.remove_command("ping")
-                self.bot.add_command(old_ping)
+         with contextlib.suppress(Exception):
+             self.bot.remove_command("info")
+             self.bot.remove_command("ping")
+
     @commands.command()
     async def info(self, ctx):
         """Shows information about Cop<:cop:1243924879045034075>."""
@@ -80,11 +74,5 @@ class cop(commands.Cog):
       msg = await bank.get_leaderboard(positions = 100, guild=guild)
       embed = discord.Embed(title = "Top 100", description = (f"{msg}"))
       await ctx.send(embed=embed)
-async def setup(bot: Red) -> None:
-    global old_ping
-    old_ping = bot.get_command("ping")
-    if old_ping:
-        bot.remove_command(old_ping.name)
-        cog = cop(bot)
-    await bot.add_cog(cog)
+
         
