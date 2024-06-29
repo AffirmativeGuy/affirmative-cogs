@@ -45,6 +45,7 @@ class cop(commands.Cog):
         embed.add_field(inline=False, name = ' ', value = 'Use `m!credits` and `m!findcog` to view the other sources used in Cop.')
         embed.add_field( inline=False, name = ' ', value = "You may be wondering that how can I invite Cop, currently it's not possible to invite Cop, as He(The Most Dumbest Cop in the world) is a private bot, but if you still want to invite Cop, then you have to contact AffirmativeGuy.\nAffirmativeGuy:- What gem did you find in Cop, that you want to invite him? I mean he is the dumbest Cop, and he always sleeps 💤.\nProbably you should host your own Red instance instead of inviting Cop.")
         embed.add_field( inline=False, name = "", value = (f"**<:suspython:1252942734738591776> Python Version: {python_version} \n<:dpy:1252942959855276143> discord.py: {dpy_version} \n<:cop:1244503516039348234> Red version: {red_version} \n🏓 Ping : {ping}ms\n**"))
+        embed.set_image(url = 'https://cdn.discordapp.com/attachments/1251495443557519382/1255732784769531985/20240627_092258_0000.png?ex=6680d6ca&is=667f854a&hm=aca37f3293103b05e89cbf7e440651163159550db2f81b4b8c3589518a0b156d&')
         await ctx.send(embed=embed)
     @commands.command()
     async def credits(self, ctx):
