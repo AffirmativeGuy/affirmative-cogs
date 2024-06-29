@@ -45,7 +45,7 @@ class cop(commands.Cog):
         embed.add_field( inline=False, name = ' ',  value = 'I (<:cop:1243924879045034075>) am a instance of Red-DiscordBot, if you want a bot like me(Cause i am so good and cool 😎),then you too can host your own instance by following the [Red installation docs](https://docs.discord.red/en/stable/install_guides/index.html) .\n')
         embed.add_field(inline=False, name = ' ', value = 'Use `m!credits` and `m!findcog` to view the other sources used in Cop.')
         embed.add_field( inline=False, name = ' ', value = "You may be wondering that how can I invite Cop, currently it's not possible to invite Cop, as He(The Most Dumbest Cop in the world) is a private bot, but if you still want to invite Cop, then you have to contact AffirmativeGuy.\nAffirmativeGuy:- What gem did you find in Cop, that you want to invite him? I mean he is the dumbest Cop, and he always sleeps 💤.\nProbably you should host your own Red instance instead of inviting Cop.")
-        embed.add_field(inline=False, name = '', value=(f"Server Slots: ```{guilds}/100```"))
+        embed.add_field(inline=False, name = '', value=(f"**Server Slots:** ```{guilds}/100```"))
         embed.add_field( inline=False, name = "", value = (f"**<:suspython:1252942734738591776> Python Version: {python_version} \n<:dpy:1252942959855276143> discord.py: {dpy_version} \n<:cop:1244503516039348234> Red version: {red_version} \n🏓 Ping : {ping}ms\n**"))
         await ctx.send(embed=embed)
     @commands.command()
