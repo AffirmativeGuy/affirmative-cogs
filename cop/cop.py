@@ -21,6 +21,10 @@ class cop(commands.Cog):
         self.bot = bot
     async def cog_unload(self) -> None:
          with contextlib.suppress(Exception):
+             self.bot.get_command("info")
+             self.bot.get_command("ping")
+             self.bot.get_command("invite")
+             self.bot.remove_command("invite")
              self.bot.remove_command("info")
              self.bot.remove_command("ping")
 
@@ -74,5 +78,12 @@ class cop(commands.Cog):
       msg = await bank.get_leaderboard(positions = 100, guild=guild)
       embed = discord.Embed(title = "Top 100", description = (f"{msg}"))
       await ctx.send(embed=embed)
+    @commands.command()
+    async def invite(self, ctx):
+        """Invite Cop to your server"""
+        embed = discord.Embed(title = "Want to invite Cop?", description = (f"We've got you covered."))
+        embed.add_field(name='', value = "You may know that Cop is a private bot, not accessible to large number of servers so we made a requirement for it.\nYou need to have atleast 2000 members in your server(Excluding bots) and the server should be following Discord's Tos.")
+        embed.add_field(name='', value = "Now that you know what things do you need for inviting Cop, here's the forum link you need to fill out,\n https://affirmativeguy.github.io/invite.html")
+        await ctx.send(embed=embed)
 
         
