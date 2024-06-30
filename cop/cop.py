@@ -2,6 +2,7 @@ import discord
 from redbot.core.utils.views import SetApiView
 from redbot.core.utils.chat_formatting import box
 import sys
+from redbot.cogs.downloader.converters import InstalledCog
 from redbot.core.bot import Red
 from redbot.core import (
     __version__,
