@@ -2,6 +2,7 @@ import discord
 from redbot.core.utils.views import SetApiView
 from redbot.core.utils.chat_formatting import box
 import sys
+import random
 from redbot.cogs.downloader.converters import InstalledCog
 from redbot.core.bot import Red
 from redbot.core import (
@@ -33,7 +34,7 @@ class cop(commands.Cog):
     @commands.is_owner()
     async def update(self, ctx: commands.Context, *cogs: InstalledCog):
         """Updates all the installed cog's!"""
-        prefix = self.bot.prefix
+        prefix = await get_prefix
         rprefix = random.choice(prefix)
         cog_update = self.bot.get_command("cog update")
         if cog_update is None:
