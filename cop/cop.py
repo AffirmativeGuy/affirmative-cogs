@@ -34,7 +34,8 @@ class cop(commands.Cog):
     @commands.is_owner()
     async def update(self, ctx: commands.Context, *cogs: InstalledCog):
         """Updates all the installed cog's!"""
-        prefix = await self.bot.get_prefixes
+        guild = ctx.guild
+        prefix = await get_valid_prefixes(guild=guild)
         rprefix = random.choice(prefix)
         cog_update = self.bot.get_command("cog update")
         if cog_update is None:
