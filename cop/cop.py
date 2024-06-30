@@ -46,9 +46,6 @@ class cop(commands.Cog):
         """Shows information about Cop<:cop:1243924879045034075>."""
         guilds = len(self.bot.guilds)
         ping = round(self.bot.latency * 1000)
-        python_url = "https://www.python.org/"
-        dpy_repo = "https://github.com/Rapptz/discord.py"
-        red_pypi = "https://pypi.org/project/Red-DiscordBot"
         dpy_version = "{}".format(discord.__version__)
         python_version = "{}.{}.{}".format(*sys.version_info[:3])
         red_version = "{}".format(__version__)
@@ -64,10 +61,6 @@ class cop(commands.Cog):
     @commands.command()
     async def credits(self, ctx):
         """Shows the credits of Cop."""
-        cog = self.bot.get_cog("Downloader")
-        repos = cog._repo_manager.repos
-        s_repos = sorted(repos, key=lambda r: str.lower(r.name))
-        title = "Credits"
         embed = discord.Embed(title = 'The Honorable CreditBoard', description = " ")
         embed.add_field(inline=False, name = 'Red-DiscordBot', value = "Cop is a instance of Red, Created by [Twentysix26](https://github.com/Twentysix26) and [improved by many awesome people.](https://github.com/Cog-Creators/Red-DiscordBot/graphs/contributors)")
         embed.add_field(inline=False, name = 'Emojis', value = "Most of the emojis used in this bot is taken from NQN, so the credits goes to their respective owners.")  
