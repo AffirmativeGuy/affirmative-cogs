@@ -33,9 +33,11 @@ class cop(commands.Cog):
     @commands.is_owner()
     async def update(self, ctx: commands.Context, *cogs: InstalledCog):
         """Updates all the installed cog's!"""
+        prefix = self.bot.prefix
+        rprefix = random.choice(prefix)
         cog_update = self.bot.get_command("cog update")
         if cog_update is None:
-            return await ctx.send(f"The downloader cog is not loaded, load zaa downloader cog by using `m!load downloader`!")
+            return await ctx.send(f"The downloader cog is not loaded, load zaa downloader cog by using `{rprefix}load downloader`!")
         await ctx.invoke(cog_update, True, *cogs)
     @commands.command()
     async def info(self, ctx):
