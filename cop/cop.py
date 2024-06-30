@@ -33,7 +33,7 @@ class cop(commands.Cog):
         """Updates all the repo's!"""
         cog_update = self.bot.get_command("cog update")
         if cog_update is None:
-            return await.ctx.send(f"The downloader cog is not loaded, load zaa downloader cog by using `m!load downloader`!")
+            return await ctx.send(f"The downloader cog is not loaded, load zaa downloader cog by using `m!load downloader`!")
         await ctx.invoke(cog_update, True, *cogs)
     @commands.command()
     async def info(self, ctx):
