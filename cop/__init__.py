@@ -9,6 +9,8 @@ old_info = None
 old_ping = None
 
 async def setup(bot: Red) -> None:
+    bot.get_command("invite")
+    bot.remove_command("invite")
     global old_info
     global old_ping
     old_info = bot.get_command("info")
@@ -22,6 +24,8 @@ async def setup(bot: Red) -> None:
     await bot.add_cog(cog)
 
 def teardown(bot: Red) -> None:
+    bot.get_command("invite")
+    bot.remove_command("invite")
     global old_info
     global old_ping
     if old_info:
