@@ -1,6 +1,5 @@
 from redbot.core.bot import Red
 from .cop import cop
-from .cop import setup
 import json
 from pathlib import Path
 
