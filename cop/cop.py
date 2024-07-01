@@ -106,9 +106,9 @@ class cop(commands.Cog):
 
 async def setup(bot: Red) -> None:
     global old_info
-    old_choose = bot.get_command("info")
-    if old_choose:
-        bot.remove_command(old_choose.name)
+    old_info = bot.get_command("info")
+    if old_info:
+        bot.remove_command(old_info.name)
 
     cog = cop(bot)
 
