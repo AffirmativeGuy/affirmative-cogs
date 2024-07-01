@@ -21,15 +21,23 @@ class cop(commands.Cog):
     """Some tools which gives info about Cop <:cop:1243924879045034075>."""
     def __init__(self, bot):
         self.bot = bot
-    async def cog_unload(self) -> None:
-         with contextlib.suppress(Exception):
-             self.bot.get_command("info")
-             self.bot.get_command("ping")
-             self.bot.get_command("invite")
-             self.bot.remove_command("invite")
-             self.bot.remove_command("info")
-             self.bot.remove_command("ping")
-    # Some part of the update command was take from Vrt's pull command!
+     #async def cog_unload(self) -> None:
+         #with contextlib.suppress(Exception):
+             #self.bot.get_command("info")
+    async def cog_unload(self):
+        global old_info
+        self.bot.get_command("ping")
+        self.bot.get_command("invite")
+        self.bot.remove_command("invite")
+        self.bot.remove_command("ping")
+
+        if old_info:
+            try:
+                self.bot.remove_command("info")
+            except:
+                pass
+            self.bot.add_command(old_info)
+    # Some part of the update command was taken from Vrt's pull command!
     @commands.command()
     @commands.is_owner()
     async def update(self, ctx: commands.Context, *cogs: InstalledCog):
@@ -94,5 +102,17 @@ class cop(commands.Cog):
         embed.add_field(inline = False, name='', value = "Now that you know what things do you need for inviting Cop, here's the forum link you need to fill out,\n https://affirmativeguy.github.io/invite.html")
         embed.set_image(url = 'https://media.discordapp.net/attachments/1251495443557519382/1256631212299124827/COPS_INVITE.png?ex=66817884&is=66802704&hm=33fd08ba819d0c6424bb0c2f44d536ac73eeedb9b0a6ebd923ac26967297e0e6&=&format=webp&quality=lossless&width=1025&height=342')
         await ctx.send(embed=embed)
-  
+
+
+async def setup(bot: Red) -> None:
+    global old_info
+    old_choose = bot.get_command("info")
+    if old_choose:
+        bot.remove_command(old_choose.name)
+
+    cog = cop(bot)
+
+    r = bot.add_cog(cog)
+    if r is not None:
+        await r
         
