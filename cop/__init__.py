@@ -8,7 +8,9 @@ from pathlib import Path
 old_info = None
 old_ping = None
 
-async def setup(bot: Red) -> None:
+# Thanks to yami for making me understand this code
+#Will add the works of every line here in near future!
+async def setup(bot: Red) -> None: 
     bot.get_command("invite")
     bot.remove_command("invite")
     global old_info
@@ -23,6 +25,7 @@ async def setup(bot: Red) -> None:
     cog = cop(bot)
     await bot.add_cog(cog)
 
+# Thanks to yami for making me understand this code
 def teardown(bot: Red) -> None:
     bot.get_command("invite")
     bot.remove_command("invite")
