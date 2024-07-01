@@ -94,18 +94,5 @@ class cop(commands.Cog):
         embed.add_field(inline = False, name='', value = "Now that you know what things do you need for inviting Cop, here's the forum link you need to fill out,\n https://affirmativeguy.github.io/invite.html")
         embed.set_image(url = 'https://media.discordapp.net/attachments/1251495443557519382/1256631212299124827/COPS_INVITE.png?ex=66817884&is=66802704&hm=33fd08ba819d0c6424bb0c2f44d536ac73eeedb9b0a6ebd923ac26967297e0e6&=&format=webp&quality=lossless&width=1025&height=342')
         await ctx.send(embed=embed)
-    async def setup(bot: Red):
-      global original_commands
-      original_commands = {}
-      cog = cop(bot)
-
-    # Store and replace original commands
-      command_names = ["info"]
-      for cmd_name in command_names:
-          original_cmd = bot.get_command(cmd_name)
-          if original_cmd:
-            original_commands[cmd_name] = original_cmd
-            bot.remove_command(cmd_name)
-
-            await bot.add_cog(cog)
+  
         
