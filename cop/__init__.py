@@ -9,7 +9,7 @@ old_info = None
 old_ping = None
 
 # Thanks to yami for making me understand this code
-#Will add the works of every line here in near future!
+# I Will add the works of every line here in near future!
 async def setup(bot: Red) -> None: 
     bot.get_command("invite")
     bot.remove_command("invite")
