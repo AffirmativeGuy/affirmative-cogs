@@ -95,8 +95,8 @@ class cop(commands.Cog):
         embed.set_image(url = 'https://media.discordapp.net/attachments/1251495443557519382/1256631212299124827/COPS_INVITE.png?ex=66817884&is=66802704&hm=33fd08ba819d0c6424bb0c2f44d536ac73eeedb9b0a6ebd923ac26967297e0e6&=&format=webp&quality=lossless&width=1025&height=342')
         await ctx.send(embed=embed)
     async def setup(bot: Red):
-      original_commands = {}
       global original_commands
+      original_commands = {}
       cog = cop(bot)
 
     # Store and replace original commands
