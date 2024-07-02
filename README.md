@@ -12,7 +12,7 @@ Theese repo is speacilly made for my bot, but if you too want to use it, then yo
 
 ## Credits
 
-This repo was not possible without theese people:
+This repo would not be possible without these people's help or contribution:
 
 Twentysix26 - Thanks to 26 for creating red bot.
 
