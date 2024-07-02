@@ -77,8 +77,8 @@ class cop(commands.Cog):
         """Get info about your balance"""
         bal = await bank.get_balance(user)
         currency = await bank.get_currency_name(ctx.guild)
-        embed = discord.Embed(title = "Yourrr Balance Isssss", description = (f"** {bal} {currency}**"))
-        await ctx.send(embed=embed)
+        msg = f"You have {bal}{currency}'s in your Bank account."
+        await ctx.send(msg)
     @commands.command()
     async def lboard(self, ctx):
       """ Very WEIRD Mangs 🥭 leaderboard """
@@ -94,5 +94,10 @@ class cop(commands.Cog):
         embed.add_field(inline = False, name='', value = "Now that you know what things do you need for inviting Cop, here's the forum link you need to fill out,\n https://affirmativeguy.github.io/invite.html")
         embed.set_image(url = 'https://media.discordapp.net/attachments/1251495443557519382/1256631212299124827/COPS_INVITE.png?ex=66817884&is=66802704&hm=33fd08ba819d0c6424bb0c2f44d536ac73eeedb9b0a6ebd923ac26967297e0e6&=&format=webp&quality=lossless&width=1025&height=342')
         await ctx.send(embed=embed)
+    @commands.command()
+    async def website(self, ctx):
+        """Want to view my rip-off website?"""
+        msg = "Here's my rip-off website - https://affirmativeguy.github.io/index.html"
+        await ctx.send(msg)
 
         
