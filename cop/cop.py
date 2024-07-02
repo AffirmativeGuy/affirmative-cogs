@@ -97,7 +97,7 @@ class cop(commands.Cog):
     @commands.command()
     async def website(self, ctx):
         """Want to view my rip-off website?"""
-        msg = "Here's my rip-off website - https://affirmativeguy.github.io/index.html"
+        msg = "Here's my rip-off(<:rip:1257744824065458258>) website - https://affirmativeguy.github.io/index.html"
         await ctx.send(msg)
 
         
