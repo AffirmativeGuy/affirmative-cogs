@@ -71,7 +71,7 @@ class cop(commands.Cog):
     async def ping(self, ctx):
         """Shows C<:cop:1243924879045034075>p's ping"""
         ping = round(self.bot.latency * 1000)
-        await ctx.send(f" You're being detained at a speed of **{ping}ms 🐱‍👤**.")
+        await ctx.send(f" You're being detained at a speed of **{ping}ms :ninja:**.")
     @commands.command()
     async def mang(self, ctx, user: discord.Member = commands.Author):
         """Get info about your balance"""
