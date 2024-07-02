@@ -77,7 +77,7 @@ class cop(commands.Cog):
         """Get info about your balance"""
         bal = await bank.get_balance(user)
         currency = await bank.get_currency_name(ctx.guild)
-        msg = f"You have {bal}{currency} in your Bank account."
+        msg = f"You have {bal} {currency} in your Bank account."
         await ctx.send(msg)
     @commands.command()
     async def lboard(self, ctx):
