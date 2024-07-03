@@ -73,7 +73,7 @@ class cop(commands.Cog):
         """Shows C<:cop:1243924879045034075>p's ping"""
         ping = round(self.bot.latency * 1000)
         await ctx.send(f" You're being detained at a speed of **{ping}ms** <a:nstar:1257723866046922784> .")
-    @commands.command()
+    @commands.command(name="mang", aliases=["mangs", "mangoes", "balance", "bal"])
     async def mang(self, ctx, user: discord.Member = commands.Author):
         """Get info about your balance"""
         bal = await bank.get_balance(user)
@@ -91,8 +91,8 @@ class cop(commands.Cog):
     async def invite(self, ctx):
         """Invite Cop to your server"""
         embed = discord.Embed(title = "Want to invite Cop?", description = (f"We've got you covered."))
-        embed.add_field(inline = False, name='', value = "You may know that Cop is a private bot, not accessible to large number of servers so we made a requirement for it.\nYou need to have at least 2000 members in your server(Excluding bots) and the server should abide by Discord's Tos.")
-        embed.add_field(inline = False, name='', value = "Now that you know what things do you need for inviting Cop, here's the forum link you need to fill out,\n https://affirmativeguy.github.io/invite.html")
+        embed.add_field(inline = False, name='', value = "You may know that Cop is a private bot, not accessible to large number of servers, so we made a requirement for it.\nYou need to have at least 2000 members in your server(Excluding bots) and the server should abide by Discord's Tos.")
+        embed.add_field(inline = False, name='', value = "Now that you know what do you need for inviting Cop, here's the forum link you need to fill out,\n https://affirmativeguy.github.io/invite.html")
         embed.set_image(url = 'https://media.discordapp.net/attachments/1251495443557519382/1256631212299124827/COPS_INVITE.png?ex=66817884&is=66802704&hm=33fd08ba819d0c6424bb0c2f44d536ac73eeedb9b0a6ebd923ac26967297e0e6&=&format=webp&quality=lossless&width=1025&height=342')
         await ctx.send(embed=embed)
     @commands.command()
