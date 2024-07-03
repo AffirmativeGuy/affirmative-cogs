@@ -81,13 +81,6 @@ class cop(commands.Cog):
         msg = f"You have {bal} {currency} in your Bank account."
         await ctx.send(msg)
     @commands.command()
-    async def lboard(self, ctx):
-      """ Very WEIRD Mangs 🥭 leaderboard """
-      guild = ctx.guild
-      msg = await bank.get_leaderboard(positions = 100, guild=guild)
-      embed = discord.Embed(title = "Top 100", description = (f"{msg}"))
-      await ctx.send(embed=embed)
-    @commands.command()
     async def invite(self, ctx):
         """Invite Cop to your server"""
         embed = discord.Embed(title = "Want to invite Cop?", description = (f"We've got you covered."))
