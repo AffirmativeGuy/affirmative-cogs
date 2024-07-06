@@ -2,6 +2,7 @@ import discord
 from redbot.core.utils.views import SetApiView
 from redbot.core.utils.chat_formatting import box
 import sys
+import pyjokes
 import random
 from redbot.cogs.downloader.converters import InstalledCog
 from redbot.core.bot import Red
@@ -93,5 +94,7 @@ class cop(commands.Cog):
         """Want to view my rip-off website?"""
         msg = "Here's my rip-off(<:rip:1257744824065458258>) website - https://affirmativeguy.github.io/index.html"
         await ctx.send(msg)
-
-        
+    @commands.command()
+    async def joke(self, ctx):
+        joke = pyjokes.get_jokes()        
+        await ctx.send(joke)
