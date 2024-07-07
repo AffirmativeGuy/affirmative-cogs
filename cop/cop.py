@@ -41,8 +41,8 @@ class cop(commands.Cog):
         cog_update = self.bot.get_command("cog update")
         if cog_update is None:
             return await ctx.send(f"The downloader cog is not loaded, load zaa downloader cog by using `{rprefix}load downloader`!")
-        await ctx.invoke(cog_update, True, *cogs)
-        await ctx.send("Doneso <a:done:1257746596968267819>")
+        if await ctx.invoke(cog_update, True, *cogs):
+         await ctx.send("Doneso <a:done:1257746596968267819>")
     @commands.command()
     async def info(self, ctx):
         """Shows information about Cop<:cop:1243924879045034075>."""
