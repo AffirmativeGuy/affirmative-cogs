@@ -98,6 +98,6 @@ class cop(commands.Cog):
     async def joke(self, ctx):
         """Get some random dev based jokes."""
         joke_list = pyjokes.get_jokes()       
-        random_joke = random.choice(joke_list) 
+        random_joke = random.choice(joke_list) # Just noticed that i could just use pyjokes.get_joke instead of jokes to get a single joke lol 🤣💀
         msg = random_joke
         await ctx.send("{}".format(msg))
