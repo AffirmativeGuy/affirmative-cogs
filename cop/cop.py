@@ -96,5 +96,7 @@ class cop(commands.Cog):
         await ctx.send(msg)
     @commands.command()
     async def joke(self, ctx):
-        joke = pyjokes.get_jokes()        
-        await ctx.send(joke)
+        joke_list = pyjokes.get_jokes()       
+        random_joke = random.choice(joke_list) 
+        msg = random_joke
+        await ctx.send({}.format(msg))
