@@ -31,7 +31,7 @@ class cop(commands.Cog):
              self.bot.remove_command("info")
              self.bot.remove_command("ping")
     # Some part of the update command was taken from Vrt's pull command!
-    @commands.command() #
+    @commands.command() 
     @commands.is_owner()
     async def update(self, ctx: commands.Context, *cogs: InstalledCog):
         """Updates all the installed cog's!"""
