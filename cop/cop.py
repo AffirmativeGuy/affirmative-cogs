@@ -48,7 +48,7 @@ class cop(commands.Cog):
         except:
             msg = "Well, there's always a error wating for you!"
             await ctx.send(msg)
-           
+           ))))
     # Will update in future
     @commands.command()
     async def info(self, ctx):
