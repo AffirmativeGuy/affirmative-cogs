@@ -106,4 +106,4 @@ class cop(commands.Cog):
         
 
 
-0)
+#0)
