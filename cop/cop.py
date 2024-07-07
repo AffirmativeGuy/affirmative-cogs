@@ -33,7 +33,7 @@ class cop(commands.Cog):
     # Some part of the update command was take from Vrt's pull command!
     @commands.command()
     @commands.is_owner()
-    async def update(self, ctx: commands.Context, *cogs: InstalledCog, error):
+    async def update(self, ctx: commands.Context, *cogs: InstalledCog):
         """Updates all the installed cog's!"""
         guild = ctx.guild
         prefix = await self.bot.get_valid_prefixes(guild=guild)
