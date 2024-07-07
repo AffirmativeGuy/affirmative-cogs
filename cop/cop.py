@@ -99,4 +99,4 @@ class cop(commands.Cog):
         joke_list = pyjokes.get_jokes()       
         random_joke = random.choice(joke_list) 
         msg = random_joke
-        await ctx.send({}.format(msg))
+        await ctx.send("{}".format(msg))
