@@ -45,9 +45,9 @@ class cop(commands.Cog):
         try:
             await ctx.invoke(cog_update, True, *cogs)
             await ctx.send("Doneso <a:done:1257746596968267819>")
-        expect:
-          msg = "Well, there's always a error wating for you!"
-        await ctx.send(msg)
+            expect:
+               msg = "Well, there's always a error wating for you!"
+            await ctx.send(msg)
            
     # Will update in future
     @commands.command()
