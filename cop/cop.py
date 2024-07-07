@@ -94,8 +94,9 @@ class cop(commands.Cog):
         """Want to view my rip-off website?"""
         msg = "Here's my rip-off(<:rip:1257744824065458258>) website - https://affirmativeguy.github.io/index.html"
         await ctx.send(msg)
-    @commands.command()
+    @commands.command(name = "joke", aliases=["jokes", "Jokes", "random joke", "random jokes", "dev_joke"])
     async def joke(self, ctx):
+        """Get some random dev based jokes."""
         joke_list = pyjokes.get_jokes()       
         random_joke = random.choice(joke_list) 
         msg = random_joke
