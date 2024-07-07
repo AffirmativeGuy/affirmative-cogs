@@ -103,3 +103,7 @@ class cop(commands.Cog):
         random_joke = random.choice(joke_list) # Just noticed that i could just use pyjokes.get_joke instead of jokes to get a single joke lol 🤣💀
         msg = random_joke
         await ctx.send("{}".format(msg))
+        
+
+
+0)
