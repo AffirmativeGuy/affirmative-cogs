@@ -1,9 +1,11 @@
+import datetime
 import discord 
 from redbot.core.utils.views import SetApiView
 from redbot.core.utils.chat_formatting import box
 import sys
 import pyjokes
 import random
+from .utils.chat_formatting import humanize_timedelta # Taken from the main redbot repo,
 from redbot.cogs.downloader.converters import InstalledCog
 from redbot.core.bot import Red
 from redbot.core import (
@@ -108,7 +110,16 @@ class cop(commands.Cog):
         random_joke = random.choice(joke_list) # Just noticed that i could just use pyjokes.get_joke instead of jokes to get a single joke lol 🤣💀
         msg = random_joke
         await ctx.send("{}".format(msg))
-        
+    @commands.command()
+    async def up(self, ctx: commands.Context):
+        delta = datetime.datetime.utcnow() - self.bot.uptime
+        uptime_str = humanize_timedelta(timedelta=delta) or _("Less than one second.")
+        await ctx.send(
+            _("I have not slept since **{time_quantity} 😭!**").format(
+                time_quantity=uptime_str
+            )
+        )
+
 
 
   
