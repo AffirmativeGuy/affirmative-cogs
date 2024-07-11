@@ -115,7 +115,7 @@ class cop(commands.Cog):
         delta = datetime.datetime.utcnow() - self.bot.uptime
         uptime_str = humanize_timedelta(timedelta=delta) or _("Less than one second.")
         await ctx.send(
-            _("I have not slept since **{time_quantity} 😭!**").format(
+            ("I have not slept since **{time_quantity} 😭!**").format(
                 time_quantity=uptime_str
             )
         )
