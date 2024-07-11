@@ -113,10 +113,10 @@ class cop(commands.Cog):
     @commands.command()
     async def uptime(self, ctx: commands.Context):
         """Show's cop's uptime"""
-        delta = datetime.datetime.utcnow() - self.bot.uptime # Ada[ted from core command
+        delta = datetime.datetime.utcnow() - self.bot.uptime # Adapted from core command
         uptime = humanize_timedelta(timedelta=delta) or ("Less than one second.")
         await ctx.send(
-            ("I have not slept since **{time_quantity} 🐶!**").format(
+            ("I have not slept since **{time_quantity} <a:sad:1260965471675617340>!**").format(
                 time_quantity=uptime
             )
         )
