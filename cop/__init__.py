@@ -9,8 +9,8 @@ old_info = None
 old_ping = None
 old_invite = None
 
-# Thanks to yami for making me understand this code
-# I Will add the works of every line here in near future!
+# Thanks to yami for helping me in understanding this part
+
 async def setup(bot: Red) -> None: 
     global old_invite
     global old_info
