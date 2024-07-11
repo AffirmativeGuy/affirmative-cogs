@@ -5,7 +5,7 @@ from redbot.core.utils.chat_formatting import box
 import sys
 import pyjokes
 import random
-from .utils.chat_formatting import humanize_timedelta # Taken from the main redbot repo,
+from redbot.core.utils.chat_formatting import humanize_timedelta # Taken from the main redbot repo,
 from redbot.cogs.downloader.converters import InstalledCog
 from redbot.core.bot import Red
 from redbot.core import (
