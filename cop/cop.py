@@ -111,12 +111,13 @@ class cop(commands.Cog):
         msg = random_joke
         await ctx.send("{}".format(msg))
     @commands.command()
-    async def up(self, ctx: commands.Context):
-        delta = datetime.datetime.utcnow() - self.bot.uptime
-        uptime_str = humanize_timedelta(timedelta=delta) or _("Less than one second.")
+    async def uptime(self, ctx: commands.Context):
+        
+        delta = datetime.datetime.utcnow() - self.bot.uptime # Ada[ted from core command
+        uptime = humanize_timedelta(timedelta=delta) or _("Less than one second.")
         await ctx.send(
-            ("I have not slept since **{time_quantity} 😭!**").format(
-                time_quantity=uptime_str
+            ("I have not slept since **{time_quantity} 🐶!**").format(
+                time_quantity=uptime
             )
         )
 
