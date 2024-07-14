@@ -21,7 +21,7 @@ from redbot.core import (
 
 
 class cop(commands.Cog):
-    """Some tools which gives info about Cop <:cop:1243924879045034075>."""
+    """Some tools which gives info about Cop <:cop:1244503516039348234>."""
     def __init__(self, bot):
         self.bot = bot
     async def cog_unload(self) -> None:
@@ -54,16 +54,16 @@ class cop(commands.Cog):
     # Will update in future
     @commands.command()
     async def info(self, ctx):
-        """Shows information about Cop<:cop:1243924879045034075>."""
+        """Shows information about <:cop:1244503516039348234>."""
         guilds = len(self.bot.guilds)
         ping = round(self.bot.latency * 1000)
         dpy_version = "{}".format(discord.__version__)
         python_version = "{}.{}.{}".format(*sys.version_info[:3])
         red_version = "{}".format(__version__)
-        title = "Cop <:cop:1243924879045034075>"
-        embed = discord.Embed(title=title, description="Hi, I am the most mysterious Cop(<:cop:1243924879045034075>) in the world, and I like mangoes 🥭. I am always on-duty and ready to help whenever someone wants me. Now that you know about me, it's time to tell you about my friend named [Red](https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop/redbot). \nRed is an open source discord bot created by [Twnetysix26](https://github.com/Twentysix26) and [improved by many](https://github.com/Cog-Creators/Red-DiscordBot/graphs/contributors).")
+        title = "Cop <:cop:1244503516039348234>"
+        embed = discord.Embed(title=title, description="Hi, I am the most mysterious Cop(<:cop:1244503516039348234>) in the world, and I like mangoes 🥭. I am always on-duty and ready to help whenever someone wants me. Now that you know about me, it's time to tell you about my friend named [Red](https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop/redbot). \nRed is an open source discord bot created by [Twnetysix26](https://github.com/Twentysix26) and [improved by many](https://github.com/Cog-Creators/Red-DiscordBot/graphs/contributors).")
         embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/1225026736379396149/1434bdad4028cb752cc0ea270a3c284c.png")
-        embed.add_field( inline=False, name = ' ',  value = 'I (<:cop:1243924879045034075>) am a instance of Red-DiscordBot, if you want a bot like me(Cause i am so good and cool 😎),then you too can host your own instance by following the [Red installation docs](https://docs.discord.red/en/stable/install_guides/index.html) .\n')
+        embed.add_field( inline=False, name = ' ',  value = 'I (<:cop:1244503516039348234>) am a instance of Red-DiscordBot, if you want a bot like me(Cause i am so good and cool 😎),then you too can host your own instance by following the [Red installation docs](https://docs.discord.red/en/stable/install_guides/index.html) .\n')
         embed.add_field(inline=False, name = ' ', value = 'Use `m!credits` and `m!findcog` to view the other sources used in Cop.')
         embed.add_field( inline=False, name = ' ', value = "You may be wondering that how can I invite Cop, currently it's not possible to invite Cop, as He(The Most Dumbest Cop in the world) is a private bot, but if you still want to invite Cop, then you have to contact AffirmativeGuy or fill out the [form](https://affirmativeguy.github.io/invite) for inviting Cop.")
         embed.add_field(inline=False, name = '', value=(f"**Server Slots:** ```{guilds}/100```"))
