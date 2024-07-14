@@ -88,10 +88,10 @@ class cop(commands.Cog):
         """Get info about your balance"""
         bal = await bank.get_balance(user)
         currency = await bank.get_currency_name(ctx.guild)
-        if bal >= 1000:
+        if bal <= 1000:
          msg = f"You have {bal} {currency} in your Bank account.\n-# Bro's so poor <:evilsmile:1261970255933341717>!"
          await ctx.send(msg)
-        elif bal >= 10000:
+        elif bal <= 10000:
          msg = f"You have {bal} {currency} in your Bank account.\n-# Bro should have been considered rich <:stubborn:1261970319011217541>!"
          await ctx.send(msg)
         else:
