@@ -83,7 +83,7 @@ class cop(commands.Cog):
         """Shows C<:cop:1243924879045034075>p's ping"""
         ping = round(self.bot.latency * 1000)
         await ctx.send(f" You're being detained at a speed of **{ping}ms** <a:nstar:1257723866046922784> .")
-    @commands.command(name="mang", aliases=["mangs", "mangoes", "bank balance", "balance", "bal"])
+    @commands.command(name="bank balance", aliases=["mangs", "mangoes", "mang", "balance", "bal"])
     async def mang(self, ctx, user: discord.Member = commands.Author):
         """Get info about your balance"""
         bal = await bank.get_balance(user)
