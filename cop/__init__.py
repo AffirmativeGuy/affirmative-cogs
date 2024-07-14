@@ -15,11 +15,15 @@ async def setup(bot: Red) -> None:
     global old_invite
     global old_info
     global old_ping
+    global old_bank_balance
     global old_uptime
     old_uptime = bot.get_command("uptime")
     old_info = bot.get_command("info")
     old_ping = bot.get_command("ping")
     old_invite = bot.get_command("invite")
+    old_bank_balance = bot.get_command("bank balance")
+    if old_bank_balance:
+        bot.remove_command(old_bank_balance.name)
     if old_info:
         bot.remove_command(old_info.name)
     if old_ping:
@@ -38,9 +42,13 @@ def teardown(bot: Red) -> None:
     global old_info
     global old_uptime
     global old_ping
+    global old_bank_balance
     if old_info:
         bot.remove_command("info")
         bot.add_command(old_info)
+    if old_bank_balance:
+        bot.remove_command("bank balance")
+        bot.add_command(old_bank_balance)
     if old_ping:
         bot.remove_command("ping")
         bot.add_command(old_ping)
