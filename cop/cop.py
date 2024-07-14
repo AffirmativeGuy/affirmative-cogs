@@ -48,7 +48,7 @@ class cop(commands.Cog):
             await ctx.invoke(cog_update, True, *cogs)
             await ctx.send("Doneso <a:done:1257746596968267819>")
         except:
-            msg = "Well, there's always a error wating for you!"
+            msg = "Well, there's always a error waiting for you!"
             await ctx.send(msg)
           
     # Will update in future
@@ -72,7 +72,7 @@ class cop(commands.Cog):
     @commands.command()
     async def credits(self, ctx):
         """Shows the credits of Cop."""
-        embed = discord.Embed(title = 'The Honorable CreditBoard', description = " ")
+        embed = discord.Embed(title = 'The Honorable CreditBoard <:nervousgrin:1261969864952643745>', description = " ")
         embed.add_field(inline=False, name = 'Red-DiscordBot', value = "Cop is a instance of Red, Created by [Twentysix26](https://github.com/Twentysix26) and [improved by many awesome people.](https://github.com/Cog-Creators/Red-DiscordBot/graphs/contributors)")
         embed.add_field(inline=False, name = 'Emojis', value = "Most of the emojis used in this bot is taken from NQN and Emoji.gg, so the credits goes to their respective owners.")  
         embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to those awesome people for their work :P! <:thanks:1254778925582778389>)', value = '**[aaa3a-cogs](https://github.com/AAA3A-AAA3A/AAA3A-cogs): aaa3a\n[ad-cog](https://github.com/aikaterna/gobcog.git): aikaterna\n[adrian](https://github.com/designbyadrian/CogsByAdrian.git): thinkadrian \n[blizz-cogs](https://git.purplepanda.cc/blizz/blizz-cogs): blizzthewolf\n[crab-cogs](https://github.com/orchidalloy/crab-cogs): hollowstrawberry\n[flare-cogs](https://github.com/flaree/Flare-Cogs): flare (flare#0001)\n[fluffycogs](https://github.com/zephyrkul/FluffyCogs): Zephyrkul (Zephyrkul#1089)\n[jojocogs](https://github.com/Just-Jojo/JojoCogs): Jojo#7791\n[jumperplugins](https://github.com/Redjumpman/Jumper-Plugins): Redjumpman (Redjumpman#1337)\n[laggrons-dumb-cogs](https://github.com/retke/Laggrons-Dumb-Cogs): El Laggron\n[lui-cogs-v3](https://github.com/Injabie3/lui-cogs-v3): Injabie3#1660, sedruk, KaguneAstra#6000, TheDarkBot#1677, quachtridat・たつ#8232\n[maxcogs](https://github.com/ltzmax/maxcogs): MAX\n**')
