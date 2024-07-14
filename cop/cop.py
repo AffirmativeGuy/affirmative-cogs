@@ -74,7 +74,7 @@ class cop(commands.Cog):
         """Shows the credits of Cop."""
         embed = discord.Embed(title = 'The Honorable CreditBoard', description = " ")
         embed.add_field(inline=False, name = 'Red-DiscordBot', value = "Cop is a instance of Red, Created by [Twentysix26](https://github.com/Twentysix26) and [improved by many awesome people.](https://github.com/Cog-Creators/Red-DiscordBot/graphs/contributors)")
-        embed.add_field(inline=False, name = 'Emojis', value = "Most of the emojis used in this bot is taken from NQN, so the credits goes to their respective owners.")  
+        embed.add_field(inline=False, name = 'Emojis', value = "Most of the emojis used in this bot is taken from NQN and Emoji.gg, so the credits goes to their respective owners.")  
         embed.add_field(inline=False, name = 'Cogs and their creators(Thanks to those awesome people for their work :P! <:thanks:1254778925582778389>)', value = '**[aaa3a-cogs](https://github.com/AAA3A-AAA3A/AAA3A-cogs): aaa3a\n[ad-cog](https://github.com/aikaterna/gobcog.git): aikaterna\n[adrian](https://github.com/designbyadrian/CogsByAdrian.git): thinkadrian \n[blizz-cogs](https://git.purplepanda.cc/blizz/blizz-cogs): blizzthewolf\n[crab-cogs](https://github.com/orchidalloy/crab-cogs): hollowstrawberry\n[flare-cogs](https://github.com/flaree/Flare-Cogs): flare (flare#0001)\n[fluffycogs](https://github.com/zephyrkul/FluffyCogs): Zephyrkul (Zephyrkul#1089)\n[jojocogs](https://github.com/Just-Jojo/JojoCogs): Jojo#7791\n[jumperplugins](https://github.com/Redjumpman/Jumper-Plugins): Redjumpman (Redjumpman#1337)\n[laggrons-dumb-cogs](https://github.com/retke/Laggrons-Dumb-Cogs): El Laggron\n[lui-cogs-v3](https://github.com/Injabie3/lui-cogs-v3): Injabie3#1660, sedruk, KaguneAstra#6000, TheDarkBot#1677, quachtridat・たつ#8232\n[maxcogs](https://github.com/ltzmax/maxcogs): MAX\n**')
         embed.add_field(inline=False, name = ' ', value = '**[affirmative-cogs](https://github.com/AffirmativeGuy/affirmative-cogs): affirmativeguy\n[npc-cogs](https://github.com/npc203/npc-cogs): epic guy#0715\n[pcxcogs](https://github.com/PhasecoreX/PCXCogs): PhasecoreX (PhasecoreX#0635)\n[seina-cogs](https://github.com/japandotorg/Seina-Cogs/): inthedark.org\n[sravan](https://github.com/sravan1946/sravan-cogs): sravan\n[toxic-cogs](https://github.com/NeuroAssassin/Toxic-Cogs): Neuro Assassin\n[Trusty-cogs](https://github.com/TrustyJAID/Trusty-cogs/): TrustyJAID\n[vrt-cogs](https://github.com/vertyco/vrt-cogs): Vertyco\n[yamicogs](https://github.com/yamikaitou/YamiCogs): YamiKaitou#8975\n**')
         await ctx.send(embed=embed)
@@ -84,7 +84,7 @@ class cop(commands.Cog):
         ping = round(self.bot.latency * 1000)
         await ctx.send(f" You're being detained at a speed of **{ping}ms** <a:nstar:1257723866046922784> .")
     @commands.command(name="mang", aliases=["mangs", "mangoes", "balance", "bal"])
-    async def mang(self, ctx, user: discord.Member):
+    async def mang(self, ctx, user: discord.Member = commands.Author or discord.Member):
         """Get info about your balance"""
         bal = await bank.get_balance(user)
         currency = await bank.get_currency_name(ctx.guild)
